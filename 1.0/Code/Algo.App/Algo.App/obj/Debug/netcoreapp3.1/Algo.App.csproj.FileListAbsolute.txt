@@ -1,0 +1,8 @@
+C:\Users\Suman.Saurabh\Algorithms\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Algo.App.csproj.AssemblyReference.cache
+C:\Users\Suman.Saurabh\Algorithms\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Algo.App.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Suman.Saurabh\Algorithms\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Algo.App.AssemblyInfoInputs.cache
+C:\Users\Suman.Saurabh\Algorithms\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Algo.App.AssemblyInfo.cs
+C:\Users\Suman.Saurabh\Algorithms\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Algo.App.csproj.CoreCompileInputs.cache
+C:\Users\Suman.Saurabh\Algorithms\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Algo.App.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Suman.Saurabh\Algorithms\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Algo.App.RazorAssemblyInfo.cache
+C:\Users\Suman.Saurabh\Algorithms\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Algo.App.RazorAssemblyInfo.cs
