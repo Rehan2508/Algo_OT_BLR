@@ -8,18 +8,14 @@ create table SP_Shortest_Path_Header(
      primary key(algo_id)
 );
 
-select * from SP_City_Master;
-
-drop table SP_Routes;
-
 create table SP_Routes(
-	 algo_id int,
-	 city_code_from varchar(10),
+	 route_id int,
+	 city_from_code varchar(10),
      city_from_name varchar(40),
-     city_code_to varchar(10),
+     city_to_code varchar(10),
      city_to_name varchar(40),
      distance double(25,10),
-     primary key(algo_id)
+     primary key(route_id)
 );
 
 create table SP_City_Master(
@@ -28,8 +24,6 @@ create table SP_City_Master(
     city_name varchar(40),
     primary key(city_id)
 );
-
--- distance from A to B and B to A maybe diff.
 
 
 
