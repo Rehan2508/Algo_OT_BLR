@@ -1,4 +1,6 @@
-﻿using Algo.App.Models;
+﻿using Algo.App.Data;
+using Algo.App.Models;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -12,14 +14,27 @@ namespace Algo.App.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly DataContext _context;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, DataContext context, IHttpContextAccessor httpContextAccessor)
         {
             _logger = logger;
+            _context = context;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public IActionResult Index()
         {
+            if (DataParsing.cityCodes.Count == 0)
+            {
+                List<Routes> routeList = _context.Routes.ToList();
+                _httpContextAccessor.HttpContext.Session.SetComplexData("RoutesTable", routeList);
+                List<CityCode> cityList = _context.CityCodes.ToList();
+                _httpContextAccessor.HttpContext.Session.SetComplexData("CityTable", cityList);
+                DataParsing.setCityCodes(cityList);
+                DataParsing.setCityName(cityList);
+            }
             return View();
         }
 
