@@ -39,7 +39,7 @@ namespace Algo.App.Controllers
 
         }
 
-        [HttpGet("dijkstra/{route}")]
+        [HttpGet("dijkstra")]
         public ActionResult<ServiceResponse> Get(GetRouteDto route)
         {
             return Ok(_dijkstraService.GetShortestPath(route));
