@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rehan.Dilkash\\Desktop\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj": {}
+    "C:\\Users\\Suman.Saurabh\\Algorithms\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rehan.Dilkash\\Desktop\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj": {
+    "C:\\Users\\Suman.Saurabh\\Algorithms\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rehan.Dilkash\\Desktop\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
+        "projectUniqueName": "C:\\Users\\Suman.Saurabh\\Algorithms\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
         "projectName": "Algo.App",
-        "projectPath": "C:\\Users\\Rehan.Dilkash\\Desktop\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
-        "packagesPath": "C:\\Users\\Rehan.Dilkash\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rehan.Dilkash\\Desktop\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\obj\\",
+        "projectPath": "C:\\Users\\Suman.Saurabh\\Algorithms\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
+        "packagesPath": "C:\\Users\\Suman.Saurabh\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Suman.Saurabh\\Algorithms\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Rehan.Dilkash\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Suman.Saurabh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +43,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+<<<<<<< HEAD
+=======
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
@@ -65,6 +71,7 @@
               "version": "[3.1.5, )"
             }
           },
+>>>>>>> 58e79a12a39a0f63e8660119d3cbf778446f1e7a
           "imports": [
             "net461",
             "net462",
@@ -83,7 +90,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,26 @@
+INSERT INTO SP_City_Master
+  (city_id,city_code,city_name)
+VALUES
+  (1,'001','Ahmedabad'),
+  (2,'002','Bangalore'),
+  (3,'003','Bhubaneshwar'),
+  (4,'004','Bombay'),
+  (5,'005','Chandigarh'),
+  (6,'006','Chennai'),
+  (7,'007','Cochin'),
+  (8,'008','Delhi'),
+  (9,'009','Hyderabad'),
+  (10,'010','Indore'),
+  (11,'011','Jaipur'),
+  (12,'012','Kanpur'),
+  (13,'013','Kolkata'),
+  (14,'014','Lucknow'),
+  (15,'015','Nagpur'),
+  (16,'016','Nasik'),
+  (17,'017','Panaji'),
+  (18,'018','Patna'),
+  (19,'019','Pondicherry'),
+  (20,'020','Pune'),
+  (21,'021','Ranchi'),
+  (22,'022','Shillong'),
+  (23,'023','Shimla');
