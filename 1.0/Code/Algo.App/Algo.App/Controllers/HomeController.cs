@@ -22,10 +22,7 @@ namespace Algo.App.Controllers
             _logger = logger;
             _context = context;
             _httpContextAccessor = httpContextAccessor;
-        }
 
-        public IActionResult Index()
-        {
             if (DataParsing.cityCodes.Count == 0)
             {
                 List<Routes> routeList = _context.Routes.ToList();
@@ -35,6 +32,10 @@ namespace Algo.App.Controllers
                 DataParsing.setCityCodes(cityList);
                 DataParsing.setCityName(cityList);
             }
+        }
+
+        public IActionResult Index()
+        {
             return View();
         }
 

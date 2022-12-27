@@ -11,7 +11,7 @@ namespace Algo.App.Models
     {
         public string path { get; set; } = String.Empty;
         public double distance { get; set; }
-        public double[,] graph { get; set; }
+        public string graph { get; set; }
         public string timeComplexity { get; set; }
         public string spaceComplexity { get; set; }
         public JsonResult jsonResult { get; set;}
