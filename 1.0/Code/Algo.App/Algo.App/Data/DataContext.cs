@@ -1,8 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Algo.App.Models;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Algo.App.Dtos;
 
 namespace Algo.App.Data
 {
@@ -12,6 +14,7 @@ namespace Algo.App.Data
         {
 
         }
-        //public DbSet<ModelName> ModelNames { get; set; }
+        public DbSet<Routes> Routes { get; set; }
+        public DbSet<CityCode> CityCodes { get; set; }
     }
 }
