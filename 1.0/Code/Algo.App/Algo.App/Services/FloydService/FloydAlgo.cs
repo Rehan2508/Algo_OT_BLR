@@ -13,6 +13,7 @@ namespace Algo.App.Services.FloydService
         {
             int minIndex = -1;
             double minimumDist = double.MaxValue;
+            int j=0;
             while(vertices > j)
             {
                 if (shortestPathSet[j] == false && distanceList[j] <= minimumDist)
@@ -44,7 +45,7 @@ namespace Algo.App.Services.FloydService
                 int header = MinimumDist(distanceList, shortestPathSet);
                 shortestPathSet[header] = true;
                 int v=0;
-                while(vertices < v)
+                while(vertices > v)
                 {
                     if (!shortestPathSet[v] && graph[header, v] != 0
                         && distanceList[header] != int.MaxValue
