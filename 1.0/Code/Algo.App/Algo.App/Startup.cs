@@ -1,6 +1,7 @@
 using Algo.App.Data;
 using Algo.App.Services.DijkstraService;
 using Algo.App.Services.FloydService;
+using Algo.App.Services.GeneticService;
 using Algo.App.Services.RouteDataService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -35,6 +36,7 @@ namespace Algo.App
             services.AddScoped<IDijkstraService, DijkstraService>();
             services.AddScoped<IFloydService, FloydService>();
             services.AddScoped<IRoutesDataService, RoutesDataService>();
+            services.AddScoped<IGeneticService, GeneticService>();
             services.Configure<CookiePolicyOptions>(options =>
             {
                 options.CheckConsentNeeded = context => true;

@@ -31,7 +31,7 @@ namespace Algo.App.Services.GeneticService
             response.distance = result.distance;
             response.path = result.path;
             response.graph = DataParsing.GraphToString(graph);
-            response.timeComplexity = "O(n^2)";
+            response.timeComplexity = "O(gnm) ,  g = no.of generations , n = population size, and m = size of individuals";
             response.spaceComplexity = "O(n)";
             _routesDataService.SaveData("Genetic Algorithm", route, response);
             return response;
