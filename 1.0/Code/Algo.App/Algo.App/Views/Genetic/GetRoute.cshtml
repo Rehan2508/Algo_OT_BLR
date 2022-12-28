@@ -1,0 +1,45 @@
+﻿@model Algo.App.Models.ServiceResponse
+
+@{
+    ViewData["Title"] = "GetRoute";
+}
+
+<h1>Genetic</h1>
+
+<div>
+    <h4>Output</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.path)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.path)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.distance)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.distance)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.graph)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.graph)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.timeComplexity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.timeComplexity)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.spaceComplexity)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.spaceComplexity)
+        </dd>
+    </dl>
+</div>
+

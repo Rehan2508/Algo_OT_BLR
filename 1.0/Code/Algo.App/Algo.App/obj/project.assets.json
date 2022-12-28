@@ -1,6 +1,9 @@
 {
   "version": 3,
   "targets": {
+<<<<<<< HEAD
+    ".NETCoreApp,Version=v3.1": {}
+=======
     ".NETCoreApp,Version=v3.1": {
       "AutoMapper/12.0.0": {
         "type": "package",
@@ -8557,8 +8560,13 @@
         "system.xml.xmlserializer.nuspec"
       ]
     }
+>>>>>>> 58e79a12a39a0f63e8660119d3cbf778446f1e7a
   },
+  "libraries": {},
   "projectFileDependencyGroups": {
+<<<<<<< HEAD
+    ".NETCoreApp,Version=v3.1": []
+=======
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.32",
@@ -8566,21 +8574,27 @@
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.32",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.5"
     ]
+>>>>>>> 58e79a12a39a0f63e8660119d3cbf778446f1e7a
   },
   "packageFolders": {
-    "C:\\Users\\Rehan.Dilkash\\.nuget\\packages\\": {}
+    "C:\\Users\\Suman.Saurabh\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rehan.Dilkash\\Desktop\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
+      "projectUniqueName": "C:\\Users\\Suman.Saurabh\\Algorithms\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
       "projectName": "Algo.App",
-      "projectPath": "C:\\Users\\Rehan.Dilkash\\Desktop\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
-      "packagesPath": "C:\\Users\\Rehan.Dilkash\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rehan.Dilkash\\Desktop\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\obj\\",
+      "projectPath": "C:\\Users\\Suman.Saurabh\\Algorithms\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
+      "packagesPath": "C:\\Users\\Suman.Saurabh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Suman.Saurabh\\Algorithms\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Rehan.Dilkash\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Suman.Saurabh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8605,6 +8619,8 @@
     "frameworks": {
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
+<<<<<<< HEAD
+=======
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": {
             "target": "Package",
@@ -8631,6 +8647,7 @@
             "version": "[3.1.5, )"
           }
         },
+>>>>>>> 58e79a12a39a0f63e8660119d3cbf778446f1e7a
         "imports": [
           "net461",
           "net462",
@@ -8649,7 +8666,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
       }
     }
   }
