@@ -23,7 +23,7 @@ namespace Algo.App.Controllers
         {
             return View(new GetRouteDto());
         }
-        public IActionResult GetJsonData(GetRouteDto route)
+        public JsonResult GetJsonData(GetRouteDto route)
         {
             var response = _floydService.GetShortestPath(route);
             return Json(response);
