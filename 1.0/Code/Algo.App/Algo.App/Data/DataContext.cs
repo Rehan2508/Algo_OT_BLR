@@ -16,5 +16,6 @@ namespace Algo.App.Data
         }
         public DbSet<Routes> Routes { get; set; }
         public DbSet<CityCode> CityCodes { get; set; }
+        public DbSet<RoutesData> RoutesDatas { get; set; }
     }
 }

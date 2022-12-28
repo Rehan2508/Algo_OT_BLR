@@ -1,6 +1,7 @@
 ﻿using Algo.App.Data;
 using Algo.App.Dtos;
 using Algo.App.Models;
+using Algo.App.Services.RouteDataService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,9 +15,11 @@ namespace Algo.App.Services.GeneticService
     public class GeneticService : IGeneticService
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
-        public GeneticService(IHttpContextAccessor httpContextAccessor)
+        private readonly IRoutesDataService _routesDataService;
+        public GeneticService(IHttpContextAccessor httpContextAccessor, IRoutesDataService routesDataService)
         {
             _httpContextAccessor = httpContextAccessor;
+            _routesDataService = routesDataService;
         }
         public ServiceResponse GetShortestPath(GetRouteDto route)
         {
@@ -30,6 +33,7 @@ namespace Algo.App.Services.GeneticService
             response.graph = DataParsing.GraphToString(graph);
             response.timeComplexity = "O(n^2)";
             response.spaceComplexity = "O(n)";
+            _routesDataService.SaveData("Genetic Algorithm", route, response);
             return response;
         }
     }

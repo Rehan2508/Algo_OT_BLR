@@ -1,5 +1,4 @@
-﻿using Algo.App.Dtos;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -7,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace Algo.App.Models
 {
-    [Table("SP_Route")]
+    [Table("SP_ShortestPathHeader")]
     public class RoutesData
     {
+        [Column("route_id")]
         public int id { get; set; }
+        [Column("algoName")]
         public string algoName { get; set; }
-        public GetRouteDto input { get; set; }
-        public ServiceResponse output { get; set; }
+        [Column("algoInput")]
+        public string algoInput { get; set; }
+        [Column("algoOutput")]
+        public string algoOutput { get; set; }
     }
 }

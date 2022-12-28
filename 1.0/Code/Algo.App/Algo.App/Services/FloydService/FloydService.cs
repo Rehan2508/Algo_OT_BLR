@@ -1,6 +1,7 @@
 ﻿using Algo.App.Data;
 using Algo.App.Dtos;
 using Algo.App.Models;
+using Algo.App.Services.RouteDataService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -14,9 +15,11 @@ namespace Algo.App.Services.FloydService
     public class FloydService : IFloydService
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
-        public FloydService(IHttpContextAccessor httpContextAccessor)
+        private readonly IRoutesDataService _routesDataService;
+        public FloydService(IHttpContextAccessor httpContextAccessor, IRoutesDataService routesDataService)
         {
             _httpContextAccessor = httpContextAccessor;
+            _routesDataService = routesDataService;
         }
         public ServiceResponse GetShortestPath(GetRouteDto route)
         {
@@ -32,6 +35,7 @@ namespace Algo.App.Services.FloydService
             response.graph = DataParsing.GraphToString(graph);
             response.timeComplexity = "O(n^3)";
             response.spaceComplexity = "O(n)";
+            _routesDataService.SaveData("Floyd Warshall Algorithm", route, response);
             return response;
         }
     }

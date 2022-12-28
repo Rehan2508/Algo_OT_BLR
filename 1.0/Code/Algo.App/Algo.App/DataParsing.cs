@@ -1,4 +1,5 @@
-﻿using Algo.App.Enums;
+﻿using Algo.App.Dtos;
+using Algo.App.Enums;
 using Algo.App.Models;
 using System;
 using System.Collections.Generic;

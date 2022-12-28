@@ -1,9 +1,11 @@
 ﻿using Algo.App.Data;
 using Algo.App.Dtos;
 using Algo.App.Models;
+using Algo.App.Services.RouteDataService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +17,11 @@ namespace Algo.App.Services.DijkstraService
     public class DijkstraService : IDijkstraService
     {
         private readonly IHttpContextAccessor _httpContextAccessor;
-        public DijkstraService(IHttpContextAccessor httpContextAccessor)
+        private readonly IRoutesDataService _routesDataService;
+        public DijkstraService(IHttpContextAccessor httpContextAccessor, IRoutesDataService routesDataService)
         {
             _httpContextAccessor = httpContextAccessor;
+            _routesDataService = routesDataService;
         }
         public ServiceResponse GetShortestPath(GetRouteDto route)
         {
@@ -33,6 +37,7 @@ namespace Algo.App.Services.DijkstraService
             response.graph = DataParsing.GraphToString(graph);
             response.timeComplexity = "O(n^2)";
             response.spaceComplexity = "O(n)";
+            _routesDataService.SaveData("Dijkstra’s Shortest Path Algorithm", route, response);
             return response;
         }
     }

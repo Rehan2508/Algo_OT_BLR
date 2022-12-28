@@ -156,3 +156,6 @@ C:\Users\Rehan.Dilkash\Desktop\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\
 C:\Users\Rehan.Dilkash\Desktop\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Algo.App.dll
 C:\Users\Rehan.Dilkash\Desktop\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Algo.App.pdb
 C:\Users\Rehan.Dilkash\Desktop\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Algo.App.genruntimeconfig.cache
+C:\Users\Rehan.Dilkash\Desktop\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Algo.App.csproj.AssemblyReference.cache
+C:\Users\Rehan.Dilkash\Desktop\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Razor\Views\Floyd\GetRoute.cshtml.g.cs
+C:\Users\Rehan.Dilkash\Desktop\Algo_OT_BLR\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Razor\Views\Floyd\Index.cshtml.g.cs
