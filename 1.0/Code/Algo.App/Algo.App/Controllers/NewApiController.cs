@@ -15,16 +15,22 @@ namespace Algo.App.Controllers
     [Route("api/[controller]")]
     public class NewApiController : Controller
     {
+
         private readonly DataContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IDijkstraService _dijkstraService;
-        public NewApiController(IDijkstraService dijkstraService, 
+        private readonly IDijkstraService _floydService;
+        private readonly IDijkstraService _geneticService;
+
+        public NewApiController(IDijkstraService dijkstraService, IDijkstraService floydService, IDijkstraService geneticService,
             IHttpContextAccessor httpContextAccessor,
             DataContext context)
         {
             _context = context;
             _httpContextAccessor = httpContextAccessor;
             _dijkstraService = dijkstraService;
+            _floydService = floydService;
+            _geneticService = geneticService;
 
             List<Routes> routeList = _context.Routes.ToList();
             _httpContextAccessor.HttpContext.Session.SetComplexData("RoutesTable", routeList);
@@ -40,6 +46,18 @@ namespace Algo.App.Controllers
         public ActionResult<ServiceResponse> DijkstraApi(GetRouteDto route)
         {
             return Ok(_dijkstraService.GetShortestPath(route));
+        }
+
+        [HttpPost("floyd")]
+        public ActionResult<ServiceResponse> FloydApi(GetRouteDto route)
+        {
+            return Ok(_floydService.GetShortestPath(route));
+        }
+
+        [HttpPost("genetic")]
+        public ActionResult<ServiceResponse> GeneticApi(GetRouteDto route)
+        {
+            return Ok(_geneticService.GetShortestPath(route));
         }
     }
 }
