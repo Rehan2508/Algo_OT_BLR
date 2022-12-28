@@ -27,7 +27,7 @@ namespace Algo.App.Services.GeneticService
             GeneticAlgoResult result = GeneticAlgo.Genetic(graph);
             response.distance = result.distance;
             response.path = result.path;
-            response.graph = graph;
+            response.graph = DataParsing.GraphToString(graph);
             response.timeComplexity = "O(n^2)";
             response.spaceComplexity = "O(n)";
             return response;

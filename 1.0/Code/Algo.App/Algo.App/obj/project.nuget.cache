@@ -1,11 +1,5 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "cHjA4r39RhW+0FOgHoKIvAQXcE5PZRAFPVe43zbjrjwViqN03OIV2fyntBmNEr7Eswz/XyH7CH+eJgRbr7F9HQ==",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Suman.Saurabh\\Algorithms\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
-  "expectedPackageFiles": [],
-=======
   "dgSpecHash": "7xVcbVci7wXTO+08K8jKyTF0uVGRTPjelw5B0FSKUt9lHBLqJQXU0KfdhWkPsUfgzCm3kSxE9WHU1luyl2xVow==",
   "success": true,
   "projectFilePath": "C:\\Users\\Rehan.Dilkash\\Desktop\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
@@ -172,6 +166,5 @@
     "C:\\Users\\Rehan.Dilkash\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\Rehan.Dilkash\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
->>>>>>> 58e79a12a39a0f63e8660119d3cbf778446f1e7a
   "logs": []
 }
