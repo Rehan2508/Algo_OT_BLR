@@ -2,6 +2,8 @@
 using Algo.App.Dtos;
 using Algo.App.Models;
 using Algo.App.Services.DijkstraService;
+using Algo.App.Services.FloydService;
+using Algo.App.Services.GeneticService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -19,10 +21,10 @@ namespace Algo.App.Controllers
         private readonly DataContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly IDijkstraService _dijkstraService;
-        private readonly IDijkstraService _floydService;
-        private readonly IDijkstraService _geneticService;
+        private readonly IFloydService _floydService;
+        private readonly IGeneticService _geneticService;
 
-        public NewApiController(IDijkstraService dijkstraService, IDijkstraService floydService, IDijkstraService geneticService,
+        public NewApiController(IDijkstraService dijkstraService, IFloydService floydService, IGeneticService geneticService,
             IHttpContextAccessor httpContextAccessor,
             DataContext context)
         {
