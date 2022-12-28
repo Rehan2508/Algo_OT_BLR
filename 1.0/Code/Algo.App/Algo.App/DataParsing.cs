@@ -23,6 +23,25 @@ namespace Algo.App
             }
             return graph;
         }
+        public static string GraphToString(double[,] graph)
+        {
+            string str = "{";
+            for (int i = 0; i < graph.GetLength(0); i++)
+            {
+                str += "[";
+                for (int j = 0; j < graph.GetLength(0); j++)
+                {
+                    str += graph[i, j];
+                    if (j != graph.GetLength(0) - 1)
+                        str += ",";
+                }
+                str += "]";
+                if (i != graph.GetLength(0) - 1)
+                    str += ",";
+            }
+            str += "}";
+            return str;
+        }
         public static void setCityCodes(List<CityCode> cityCodeList)
         {
             foreach(CityCode cityCode in cityCodeList)

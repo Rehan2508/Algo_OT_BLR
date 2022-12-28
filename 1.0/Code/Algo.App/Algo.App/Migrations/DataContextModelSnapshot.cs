@@ -68,6 +68,24 @@ namespace Algo.App.Migrations
 
                     b.ToTable("SP_Routes");
                 });
+
+            modelBuilder.Entity("Algo.App.Models.Temp", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Depi")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Temps");
+                });
 #pragma warning restore 612, 618
         }
     }

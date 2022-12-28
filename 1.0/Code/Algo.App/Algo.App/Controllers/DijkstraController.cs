@@ -1,5 +1,6 @@
 ﻿using Algo.App.Data;
 using Algo.App.Dtos;
+using Algo.App.Models;
 using Algo.App.Services.DijkstraService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -22,9 +23,19 @@ namespace Algo.App.Controllers
         {
             return View(new GetRouteDto());
         }
+        public JsonResult GetJsonData(GetRouteDto route)
+        {
+            var response = _dijkstraService.GetShortestPath(route);
+            return Json(response);
+        }
+        public JsonResult GetJsonData(ServiceResponse data)
+        {
+            return Json(data);
+        }
         public IActionResult GetRoute(GetRouteDto route)
         {
             var response = _dijkstraService.GetShortestPath(route);
+            response.jsonResult = GetJsonData(response);
             return View(response);
         }
     }

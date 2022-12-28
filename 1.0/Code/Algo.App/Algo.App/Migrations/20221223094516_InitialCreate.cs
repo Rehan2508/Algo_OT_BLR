@@ -45,6 +45,7 @@ namespace Algo.App.Migrations
 
             migrationBuilder.DropTable(
                 name: "SP_Routes");
+
         }
     }
 }
