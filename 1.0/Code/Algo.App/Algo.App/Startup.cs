@@ -1,5 +1,6 @@
 using Algo.App.Data;
 using Algo.App.Services.DijkstraService;
+using Algo.App.Services.FloydService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -31,6 +32,7 @@ namespace Algo.App
             services.AddControllersWithViews();
             services.AddDbContext<DataContext>(x => x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddScoped<IDijkstraService, DijkstraService>();
+            services.AddScoped<IFloydService, FloydService>();
             services.Configure<CookiePolicyOptions>(options =>
             {
                 options.CheckConsentNeeded = context => true;
