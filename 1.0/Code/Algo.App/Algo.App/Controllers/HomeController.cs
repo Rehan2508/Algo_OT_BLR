@@ -29,8 +29,11 @@ namespace Algo.App.Controllers
                 _httpContextAccessor.HttpContext.Session.SetComplexData("RoutesTable", routeList);
                 List<CityCode> cityList = _context.CityCodes.ToList();
                 _httpContextAccessor.HttpContext.Session.SetComplexData("CityTable", cityList);
-                DataParsing.setCityCodes(cityList);
-                DataParsing.setCityName(cityList);
+                if (DataParsing.cityCodes.Count == 0)
+                {
+                    DataParsing.setCityCodes(cityList);
+                    DataParsing.setCityName(cityList);
+                }
             }
         }
 
