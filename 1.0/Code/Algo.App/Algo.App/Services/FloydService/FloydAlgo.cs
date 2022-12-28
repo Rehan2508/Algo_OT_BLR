@@ -13,13 +13,14 @@ namespace Algo.App.Services.FloydService
         {
             int minIndex = -1;
             double minimumDist = double.MaxValue;
-            for (int v = 0; v < vertices; v++)
+            while(vertices > j)
             {
-                if (shortestPathSet[v] == false && distanceList[v] <= minimumDist)
+                if (shortestPathSet[j] == false && distanceList[j] <= minimumDist)
                 {
-                    minimumDist = distanceList[v];
-                    minIndex = v;
+                    minimumDist = distanceList[j];
+                    minIndex = j;
                 }
+                j++;
             }
             return minIndex;
         }
@@ -42,7 +43,8 @@ namespace Algo.App.Services.FloydService
             {
                 int header = MinimumDist(distanceList, shortestPathSet);
                 shortestPathSet[header] = true;
-                for (int v = 0; v < vertices; v++)
+                int v=0;
+                while(vertices < v)
                 {
                     if (!shortestPathSet[v] && graph[header, v] != 0
                         && distanceList[header] != int.MaxValue
@@ -51,7 +53,9 @@ namespace Algo.App.Services.FloydService
                         parent[v] = header;
                         distanceList[v] = distanceList[header] + graph[header, v];
                     }
+                    v++;
                 }
+                i++;
             }
             FloydAlgoResult result = new FloydAlgoResult();
             result.distances = distanceList;
