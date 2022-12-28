@@ -41,7 +41,6 @@ namespace Algo.App.Services.GeneticService
             cities[shuffleTo] = cities[shuffleFrom];
             cities[shuffleFrom] = temp;
         }
-        //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         public double calculateDistanceGraph(int self,int dest)
         {
@@ -219,16 +218,6 @@ namespace Algo.App.Services.GeneticService
             }
             return mutatedGeneration;
         }
-
-
-
-
-
-
-
-
-
-
         public string pathToString(List<int> list)
         {
             StringBuilder build = new StringBuilder();
