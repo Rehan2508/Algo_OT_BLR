@@ -43,7 +43,7 @@ namespace Algo.App.Services.GeneticService
 			SortedList optimization = service.generateFinalList(firstGen, secGen, thirdGen, fourthGen);
 			List<int> shortestPath = service.shortestPath(optimization);
 			double calcDistance = service.calculateDistance(shortestPath);
-			string path = service.pathToString(shortestPath);
+			 int[] path = service.pathToArray(shortestPath);
             Models.GeneticAlgoResult result = new Models.GeneticAlgoResult();
 			result.distance = calcDistance;
 			result.path = path;

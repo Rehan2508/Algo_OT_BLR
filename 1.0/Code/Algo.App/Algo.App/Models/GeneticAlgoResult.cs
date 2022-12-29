@@ -8,6 +8,6 @@ namespace Algo.App.Models
     public class GeneticAlgoResult
     {
         public double distance { get; set; }
-        public string path { get; set; }
+        public int[] path { get; set; }
     }
 }

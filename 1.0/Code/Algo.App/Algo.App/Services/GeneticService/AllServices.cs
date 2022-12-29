@@ -218,14 +218,14 @@ namespace Algo.App.Services.GeneticService
             }
             return mutatedGeneration;
         }
-        public string pathToString(List<int> list)
+        public int[] pathToArray(List<int> list)
         {
-            StringBuilder build = new StringBuilder();
+            int[] arr = new int[list.Count];
             for(int i = 0; i < list.Count; i++)
             {
-                build.Append(list[i] + " ");
+                arr[i] = list[i];
             }
-            return build.ToString();
+            return arr;
         }
 
         public SortedList generateFinalList(SortedList firstGen,SortedList secGen, SortedList thirdGen, SortedList fourthGen)
