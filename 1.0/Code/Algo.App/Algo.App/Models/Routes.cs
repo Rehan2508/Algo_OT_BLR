@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Algo.App.Models
 {
@@ -21,5 +22,9 @@ namespace Algo.App.Models
         public int destinationCode { get; set; }
         [Column("distance")]
         public double distance { get; set; }
+
+        public string SelectedCitySource { get; set; }
+        public string SelectedCityDest { get; set; }
+        public List<SelectListItem> CitiesSelectList { get; set; }
     }
 }

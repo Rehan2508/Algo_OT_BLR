@@ -1,71 +1,104 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
-
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+﻿* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
 
-/* Provide sufficient contrast against white background */
-a {
-  color: #0366d6;
-}
-
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  font-size: 14px;
-}
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
-
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
-
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
-
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
+:root {
+    --bg-color: #fdf7f7;
+    --text-color: #000;
+    --main-color: #9906af;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    height: 100%;
+    background: var(--bg-color);
+    color: var(--text-color);
 }
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px; /* Vertically center the text there */
+
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 28px 12%;
+    transition: all .50s ease;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+    .logo i {
+        color: var(--main-color);
+        font-size: 28px;
+        margin-right: 3px;
+    }
+
+    .logo span {
+        color: var(--text-color);
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+
+.navbar {
+    display: flex;
+}
+
+    .navbar a {
+        color: var(--text-color);
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 5px 0;
+        margin: 0px 30px;
+        transition: all .50s ease;
+    }
+
+        .navbar a:hover {
+            color: var(--main-color);
+        }
+
+        .navbar a.active {
+            color: var(--main-color);
+        }
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+    .main a {
+        margin-right: 25px;
+        margin-left: 10px;
+        color: var(--text-color);
+        font-size: 1.2rem;
+        font-weight: 500;
+        padding: 5px 0;
+        margin: 0px 30px;
+        transition: all .50s ease;
+    }
+
+        .main a:hover {
+            color: var(--main-color);
+        }
+
+.container {
+    display: flex;
+    align-items: center;
+    padding: 100px;
+}
+
+.pb-3 {
+    margin: auto;
+    width: 50%;
+    width: 100%;
 }

@@ -1,7 +1,9 @@
 ﻿using Algo.App.Data;
+using Algo.App.Help;
 using Algo.App.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -36,7 +38,26 @@ namespace Algo.App.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var data = new Routes();
+            var citiesData = Cities.GetAll();
+            var model = new Routes();
+            model.CitiesSelectList = new List<SelectListItem>();
+
+            foreach (var city in citiesData)
+            {
+                model.CitiesSelectList.Add(new SelectListItem { Text = city.source, Value = city.source });
+            }
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Index(Routes model)
+        {
+            var selectedcitysource = model.SelectedCitySource;
+            var selectedcitydest = model.SelectedCityDest;
+            Console.WriteLine(selectedcitysource + " " + selectedcitydest);
+            return RedirectToAction(nameof(Index));
         }
 
         public IActionResult Privacy()

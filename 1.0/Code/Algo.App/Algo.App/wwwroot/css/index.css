@@ -1,0 +1,50 @@
+﻿/*
+button {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin-left: 50px;
+    color: #fff;
+}
+
+.btn-con {
+    width: 160px;
+    height: 35px;
+    background: #b300ff;
+    color: #fff;
+    margin-left: 250px;
+    align-items:center;
+}
+
+.output {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 5px;
+    margin-left: 150px;
+    color: #000;
+}
+body{
+    text-align: center;
+    margin-left:auto;
+}*/
+
+.btn {
+    background-color: greenyellow;
+    margin-left: 90%;
+}
+
+.form-control {
+    height: 600px;
+}
+
+.dest {
+    float: right;
+}
+
+.out-out {
+    height: 200px;
+    width: 100%;
+}

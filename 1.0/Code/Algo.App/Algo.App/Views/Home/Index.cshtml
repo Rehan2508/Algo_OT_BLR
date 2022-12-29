@@ -1,8 +1,62 @@
-﻿@{
+﻿@model Routes
+
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="input">
+    <div class="row">
+        <div class="col-12">
+
+            <div class="card">
+
+                <div class="card-header">
+                    <div class="dropdown">
+                        <label>Select the Algorithm</label>
+                        <select name="algo" id="algo">
+                            <option value="empty">-- Select --</option>
+                            <option value="dijkstra">Dijkstra's Shortest Path First algorithm</option>
+                            <option value="floyd">Floyd–Warshall algorithm</option>
+                            <option value="genetic">Genetic Algorithms and heuristics</option>
+                            <option value="tsp">Traveling Salesman</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <form asp-controller="Home" asp-action="Index" method="post" runat="server">
+                        <div class="mb-4">
+                            <label class="form-label">Source City : </label>
+                            <select class="form-select" asp-items="Model.CitiesSelectList" asp-for="SelectedCitySource">
+                                <option value="NoSelectedValue">-- Please Select Source City --</option>
+                            </select>
+                            @*<input asp-for=source type="text" class="form-control" required />*@
+
+
+                            <div class="dest">
+                                <label class="form-label ">Destination City : </label>
+                                <select class="form-select" asp-items="Model.CitiesSelectList" asp-for="SelectedCityDest">
+                                    <option value="NoSelectedValue">-- Please Select Destination City --</option>
+                                </select>
+                                @*<input asp-for=destination type="text" class="form-control " required />*@
+
+
+                            </div>
+                        </div>
+
+                        <div class="mb-4 btn-con">
+                            <button type="submit" class="btn">Execute</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <hr />
+            <div class="abc">
+                <label class="form-label output">OUTPUT</label>
+                <textarea class=" out-out"></textarea>
+            </div>
+        </div>
+    </div>
+
 </div>

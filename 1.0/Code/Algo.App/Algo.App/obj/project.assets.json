@@ -8568,19 +8568,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rehan.Dilkash\\.nuget\\packages\\": {}
+    "C:\\Users\\Saket.Kumar\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rehan.Dilkash\\Desktop\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
+      "projectUniqueName": "C:\\Users\\Saket.Kumar\\source\\repos\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
       "projectName": "Algo.App",
-      "projectPath": "C:\\Users\\Rehan.Dilkash\\Desktop\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
-      "packagesPath": "C:\\Users\\Rehan.Dilkash\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rehan.Dilkash\\Desktop\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\obj\\",
+      "projectPath": "C:\\Users\\Saket.Kumar\\source\\repos\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
+      "packagesPath": "C:\\Users\\Saket.Kumar\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Saket.Kumar\\source\\repos\\1.0\\Code\\Algo.App\\Algo.App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Rehan.Dilkash\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Saket.Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8649,7 +8649,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.405\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
       }
     }
   }
