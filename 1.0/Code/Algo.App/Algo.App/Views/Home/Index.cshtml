@@ -1,4 +1,4 @@
-﻿@model Routes
+﻿@model UltimateModel
 
 @{
     ViewData["Title"] = "Home Page";
@@ -9,37 +9,30 @@
         <div class="col-12">
 
             <div class="card">
+                <form asp-controller="Home" asp-action="Index" method="post" runat="server">
+                    <div class="card-header">
+                        <div class="dropdown">
 
-                <div class="card-header">
-                    <div class="dropdown">
-                        <label>Select the Algorithm</label>
-                        <select name="algo" id="algo">
-                            <option value="empty">-- Select --</option>
-                            <option value="dijkstra">Dijkstra's Shortest Path First algorithm</option>
-                            <option value="floyd">Floyd–Warshall algorithm</option>
-                            <option value="genetic">Genetic Algorithms and heuristics</option>
-                            <option value="tsp">Traveling Salesman</option>
-                        </select>
+                            <label class="form-label">Select the Algorithm : </label>
+                            <select class="form-select" asp-items="Model.algoss.AlgosSelectList" asp-for="algoss.SelectedAlgoDropDown" required>
+                                <option value="NoSelectedValue">-- Please Select Algorithm --</option>
+                            </select>
+
+                        </div>
                     </div>
-                </div>
 
-                <div class="card-body">
-                    <form asp-controller="Home" asp-action="Index" method="post" runat="server">
+                    <div class="card-body">
                         <div class="mb-4">
                             <label class="form-label">Source City : </label>
-                            <select class="form-select" asp-items="Model.CitiesSelectList" asp-for="SelectedCitySource">
+                            <select class="form-select" asp-items="Model.routes.CitiesSelectList" asp-for="routes.SelectedCitySource" required>
                                 <option value="NoSelectedValue">-- Please Select Source City --</option>
                             </select>
-                            @*<input asp-for=source type="text" class="form-control" required />*@
-
 
                             <div class="dest">
                                 <label class="form-label ">Destination City : </label>
-                                <select class="form-select" asp-items="Model.CitiesSelectList" asp-for="SelectedCityDest">
+                                <select class="form-select" asp-items="Model.routes.CitiesSelectList" asp-for="routes.SelectedCityDest" required>
                                     <option value="NoSelectedValue">-- Please Select Destination City --</option>
                                 </select>
-                                @*<input asp-for=destination type="text" class="form-control " required />*@
-
 
                             </div>
                         </div>
@@ -47,8 +40,9 @@
                         <div class="mb-4 btn-con">
                             <button type="submit" class="btn">Execute</button>
                         </div>
-                    </form>
-                </div>
+                        </div>
+                </form>
+            </div>
 
             </div>
             <hr />
@@ -58,5 +52,3 @@
             </div>
         </div>
     </div>
-
-</div>

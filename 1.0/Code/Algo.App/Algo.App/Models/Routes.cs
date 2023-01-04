@@ -23,8 +23,11 @@ namespace Algo.App.Models
         [Column("distance")]
         public double distance { get; set; }
 
+        [NotMapped]
         public string SelectedCitySource { get; set; }
+        [NotMapped]
         public string SelectedCityDest { get; set; }
+        [NotMapped]
         public List<SelectListItem> CitiesSelectList { get; set; }
     }
 }

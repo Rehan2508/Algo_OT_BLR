@@ -14,6 +14,7 @@ namespace Algo.App.Models
         public string graph { get; set; }
         public string timeComplexity { get; set; }
         public string spaceComplexity { get; set; }
+        [NotMapped]
         public JsonResult jsonResult { get; set;}
     }
 }

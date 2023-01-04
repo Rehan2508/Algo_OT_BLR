@@ -1,15 +1,17 @@
 ﻿using Algo.App.Data;
+using Algo.App.Dtos;
 using Algo.App.Help;
 using Algo.App.Models;
+using Algo.App.Services.DijkstraService;
+using Algo.App.Services.FloydService;
+using Algo.App.Services.GeneticService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Algo.App.Controllers
 {
@@ -18,12 +20,19 @@ namespace Algo.App.Controllers
         private readonly ILogger<HomeController> _logger;
         private readonly DataContext _context;
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IDijkstraService _dijkstraService;
+        private readonly IFloydService _floydService;
+        private readonly IGeneticService _geneticService;
 
-        public HomeController(ILogger<HomeController> logger, DataContext context, IHttpContextAccessor httpContextAccessor)
+
+        public HomeController(ILogger<HomeController> logger, DataContext context, IHttpContextAccessor httpContextAccessor, IDijkstraService dijkstraService, IFloydService floydService, IGeneticService geneticService)
         {
             _logger = logger;
             _context = context;
             _httpContextAccessor = httpContextAccessor;
+            _dijkstraService = dijkstraService;
+            _floydService = floydService;
+            _geneticService = geneticService;
 
             List<Routes> routeList = _context.Routes.ToList();
             _httpContextAccessor.HttpContext.Session.SetComplexData("RoutesTable", routeList);
@@ -38,26 +47,75 @@ namespace Algo.App.Controllers
 
         public IActionResult Index()
         {
-            var data = new Routes();
             var citiesData = Cities.GetAll();
-            var model = new Routes();
-            model.CitiesSelectList = new List<SelectListItem>();
+            var algosData = Algorithms.GetAll();
+            /*var algoModel = new AlgoModel();*/
+            /*var model = new Routes();*/
+            var mainModel = new UltimateModel();
+
+            mainModel.routes = new Routes();
+            mainModel.algoss = new AlgoModel();
+
+            mainModel.routes.CitiesSelectList = new List<SelectListItem>();
+            mainModel.algoss.AlgosSelectList = new List<SelectListItem>();
+
+            foreach (var algo in algosData)
+            {
+                mainModel.algoss.AlgosSelectList.Add(new SelectListItem { Text = algo.algoName, Value = algo.algoName });
+            }
 
             foreach (var city in citiesData)
             {
-                model.CitiesSelectList.Add(new SelectListItem { Text = city.source, Value = city.source });
+                mainModel.routes.CitiesSelectList.Add(new SelectListItem { Text = city.source, Value = city.source });
             }
 
-            return View(model);
+            return View(mainModel);
         }
 
         [HttpPost]
-        public IActionResult Index(Routes model)
+        public IActionResult Index(UltimateModel model)
         {
-            var selectedcitysource = model.SelectedCitySource;
-            var selectedcitydest = model.SelectedCityDest;
-            Console.WriteLine(selectedcitysource + " " + selectedcitydest);
+            var selectedcitysource = model.routes.SelectedCitySource;
+            var selectedcitydest = model.routes.SelectedCityDest;
+            var selectAlgo = model.algoss.SelectedAlgoDropDown;
+            System.Console.WriteLine(selectedcitysource + " " + selectedcitydest);
+            System.Console.WriteLine(selectAlgo);
+            ServiceResponse response = null;
+
+            if (selectAlgo.Contains("Dijkstra's"))
+            {
+                DijkstraController dc = new DijkstraController(_dijkstraService);
+                GetRouteDto route = new GetRouteDto
+                {
+                    source = selectedcitysource,
+                    destination = selectedcitydest
+                };
+                response = _dijkstraService.GetShortestPath(route);
+            }
+            else if(selectAlgo.Contains("Floyd–Warshall"))
+            {
+                FloydController floyd = new FloydController(_floydService);
+                GetRouteDto route = new GetRouteDto
+                {
+                    source = selectedcitysource,
+                    destination = selectedcitydest
+                };
+                response = _floydService.GetShortestPath(route);
+            }
+            else if (selectAlgo.Contains("Genetic"))
+            {
+                GeneticController genetic = new GeneticController(_geneticService);
+                GetRouteDto route = new GetRouteDto
+                {
+                    source = selectedcitysource,
+                    destination = selectedcitydest
+                };
+                response = _geneticService.GetShortestPath(route);
+            }
+            System.Console.WriteLine(response);
+            System.Console.WriteLine(response.path);
             return RedirectToAction(nameof(Index));
+            //return View(response);
         }
 
         public IActionResult Privacy()
