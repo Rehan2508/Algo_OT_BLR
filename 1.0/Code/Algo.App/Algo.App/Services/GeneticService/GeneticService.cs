@@ -29,7 +29,7 @@ namespace Algo.App.Services.GeneticService
             double[,] graph = DataParsing.ListToMatrix(routeList,cityList.Count);
             GeneticAlgoResult result = GeneticAlgo.Genetic(graph);
             response.distance = result.distance;
-            response.path = result.path;
+            response.path = PathGenerator.GeneratePath(result.path);
             response.graph = DataParsing.GraphToString(graph);
             response.timeComplexity = "O(gnm) ,  g = no.of generations , n = population size, and m = size of individuals";
             response.spaceComplexity = "O(n)";
