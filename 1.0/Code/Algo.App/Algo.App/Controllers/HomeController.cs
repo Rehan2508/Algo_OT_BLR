@@ -91,8 +91,10 @@ namespace Algo.App.Controllers
                     destination = selectedcitydest
                 };
                 response = _dijkstraService.GetShortestPath(route);
+                ViewBag.path = response.path;
+                ViewBag.distance = response.distance;
             }
-            else if(selectAlgo.Contains("Floyd–Warshall"))
+            else if (selectAlgo.Contains("Floyd–Warshall"))
             {
                 FloydController floyd = new FloydController(_floydService);
                 GetRouteDto route = new GetRouteDto
@@ -101,6 +103,8 @@ namespace Algo.App.Controllers
                     destination = selectedcitydest
                 };
                 response = _floydService.GetShortestPath(route);
+                ViewBag.path = response.path;
+                ViewBag.distance = response.distance;
             }
             else if (selectAlgo.Contains("Genetic"))
             {
@@ -111,11 +115,14 @@ namespace Algo.App.Controllers
                     destination = selectedcitydest
                 };
                 response = _geneticService.GetShortestPath(route);
+                ViewBag.path = response.path;
+                ViewBag.distance = response.distance;
             }
             System.Console.WriteLine(response);
             System.Console.WriteLine(response.path);
-            return RedirectToAction(nameof(Index));
+            //return RedirectToAction(nameof(Index));
             //return View(response);
+            return View("_Output");
         }
 
         public IActionResult Privacy()

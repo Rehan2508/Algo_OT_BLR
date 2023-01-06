@@ -37,20 +37,16 @@ body{
 }
 
 .form-control {
-    height: 600px;
+    height: 800px;
 }
 
 .dest {
     float: right;
 }
 
-.out-out {
-    height: 200px;
-    width: 100%;
-}
-
 .abc {
-    height: 200px;
+    color: black;
+    height: 300px;
     width: 100%;
 }
 

@@ -321,3 +321,4 @@ C:\Users\Saket.Kumar\source\repos\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreap
 C:\Users\Saket.Kumar\source\repos\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Algo.App.pdb
 C:\Users\Saket.Kumar\source\repos\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Algo.App.genruntimeconfig.cache
 C:\Users\Saket.Kumar\source\repos\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Razor\Views\Home\IndexResult.cshtml.g.cs
+C:\Users\Saket.Kumar\source\repos\1.0\Code\Algo.App\Algo.App\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Output.cshtml.g.cs

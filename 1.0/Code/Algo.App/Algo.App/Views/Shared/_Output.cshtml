@@ -1,0 +1,53 @@
+﻿@model UltimateModel
+<div class="input">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <div class="dropdown">
+
+                        <label class="form-label">Select the Algorithm : </label>
+                        <select class="form-select" required>
+                            <option value="NoSelectedValue">-- Please Select Algorithm --</option>
+                        </select>
+
+                    </div>
+                </div>
+
+                <div class="card-body">
+                    <div class="mb-4">
+                        <label class="form-label">Source City : </label>
+                        <select class="form-select" required>
+                            <option value="NoSelectedValue">-- Please Select Source City --</option>
+                        </select>
+
+                        <div class="dest">
+                            <label class="form-label ">Destination City : </label>
+                            <select class="form-select" required>
+                                <option value="NoSelectedValue">-- Please Select Destination City --</option>
+                            </select>
+
+                        </div>
+                    </div>
+
+                    <div class="mb-4 btn-con">
+                        <button type="submit" class="btn">Execute</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <hr />
+        <div class="abc">
+            <label class="form-label output">OUTPUT</label>
+            <textarea>Path : @ViewBag.path Distance: @ViewBag.distance</textarea>
+        </div>
+    </div>
+</div>
+
+@*<div class="abc">
+        <label class="form-label output">OUTPUT:</label>
+        <p>Path : @ViewBag.path</p>
+        <p>Distance : @ViewBag.distance</p>
+    </div>
+*@
