@@ -2,45 +2,54 @@
 <div class="input">
     <div class="row">
         <div class="col-12">
-            <div class="card">
-                <div class="card-header">
-                    <div class="dropdown">
+            <form asp-controller="Home" asp-action="Index" method="post" runat="server">
 
-                        <label class="form-label">Select the Algorithm : </label>
-                        <select class="form-select" required>
-                            <option value="NoSelectedValue">-- Please Select Algorithm --</option>
-                        </select>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="dropdown">
 
-                    </div>
-                </div>
-
-                <div class="card-body">
-                    <div class="mb-4">
-                        <label class="form-label">Source City : </label>
-                        <select class="form-select" required>
-                            <option value="NoSelectedValue">-- Please Select Source City --</option>
-                        </select>
-
-                        <div class="dest">
-                            <label class="form-label ">Destination City : </label>
+                            <label class="form-label">Select the Algorithm : </label>
                             <select class="form-select" required>
-                                <option value="NoSelectedValue">-- Please Select Destination City --</option>
+                                <option value="NoSelectedValue">-- Please Select Algorithm --</option>
                             </select>
 
                         </div>
                     </div>
 
-                    <div class="mb-4 btn-con">
-                        <button type="submit" class="btn">Execute</button>
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <label class="form-label">Source City : </label>
+                            <select class="form-select" required>
+                                <option value="NoSelectedValue">-- Please Select Source City --</option>
+                            </select>
+
+                            <div class="dest">
+                                <label class="form-label ">Destination City : </label>
+                                <select class="form-select" required>
+                                    <option value="NoSelectedValue">-- Please Select Destination City --</option>
+                                </select>
+
+                            </div>
+                        </div>
+
+                        <div class="mb-4 btn-con">
+                            <button type="submit" class="btn">Execute</button>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </form>
 
         </div>
         <hr />
         <div class="abc">
-            <label class="form-label output">OUTPUT</label>
-            <textarea>Path : @ViewBag.path Distance: @ViewBag.distance</textarea>
+            <label class="form-label output out-out">OUTPUT</label>
+            <textarea style="width: 100%; height:300px;">
+                Path : @ViewBag.path
+                Distance: @ViewBag.distance
+                Graph: @ViewBag.graph
+                TimeComplexity: @ViewBag.time
+                Spacecomplexity: @ViewBag.space
+            </textarea>
         </div>
     </div>
 </div>

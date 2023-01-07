@@ -93,6 +93,9 @@ namespace Algo.App.Controllers
                 response = _dijkstraService.GetShortestPath(route);
                 ViewBag.path = response.path;
                 ViewBag.distance = response.distance;
+                ViewBag.graph = response.graph;
+                ViewBag.time = response.timeComplexity;
+                ViewBag.space = response.spaceComplexity;
             }
             else if (selectAlgo.Contains("Floyd–Warshall"))
             {
@@ -105,6 +108,9 @@ namespace Algo.App.Controllers
                 response = _floydService.GetShortestPath(route);
                 ViewBag.path = response.path;
                 ViewBag.distance = response.distance;
+                ViewBag.graph = response.graph;
+                ViewBag.time = response.timeComplexity;
+                ViewBag.space = response.spaceComplexity;
             }
             else if (selectAlgo.Contains("Genetic"))
             {
@@ -117,6 +123,9 @@ namespace Algo.App.Controllers
                 response = _geneticService.GetShortestPath(route);
                 ViewBag.path = response.path;
                 ViewBag.distance = response.distance;
+                ViewBag.graph = response.graph;
+                ViewBag.time = response.timeComplexity;
+                ViewBag.space = response.spaceComplexity;
             }
             System.Console.WriteLine(response);
             System.Console.WriteLine(response.path);

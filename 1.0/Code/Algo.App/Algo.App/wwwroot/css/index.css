@@ -32,9 +32,16 @@ body{
 }*/
 
 .btn {
-    background-color: greenyellow;
+    background-color: deepskyblue;
+    
+    color: white;
     margin-left: 90%;
 }
+
+    .btn:hover {
+        color: white;
+        background-color: darkblue;
+    }
 
 .form-control {
     height: 800px;
