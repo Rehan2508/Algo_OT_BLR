@@ -5,6 +5,7 @@ using Algo.App.Models;
 using Algo.App.Services.DijkstraService;
 using Algo.App.Services.FloydService;
 using Algo.App.Services.GeneticService;
+using Algo.App.Services.TravellingService;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -23,6 +24,7 @@ namespace Algo.App.Controllers
         private readonly IDijkstraService _dijkstraService;
         private readonly IFloydService _floydService;
         private readonly IGeneticService _geneticService;
+        private readonly ITravellingService _travellingService;
 
 
         public HomeController(ILogger<HomeController> logger, DataContext context, IHttpContextAccessor httpContextAccessor, IDijkstraService dijkstraService, IFloydService floydService, IGeneticService geneticService)
@@ -34,7 +36,7 @@ namespace Algo.App.Controllers
             _floydService = floydService;
             _geneticService = geneticService;
 
-            List<Routes> routeList = _context.Routes.ToList();
+           /* List<Routes> routeList = _context.Routes.ToList();
             _httpContextAccessor.HttpContext.Session.SetComplexData("RoutesTable", routeList);
             List<CityCode> cityList = _context.CityCodes.ToList();
             _httpContextAccessor.HttpContext.Session.SetComplexData("CityTable", cityList);
@@ -42,7 +44,7 @@ namespace Algo.App.Controllers
             {
                 DataParsing.setCityCodes(cityList);
                 DataParsing.setCityName(cityList);
-            }
+            }*/
         }
 
         public IActionResult Index()
@@ -109,6 +111,17 @@ namespace Algo.App.Controllers
                 {
                     source = selectedcitysource,
                     destination = selectedcitydest
+                };
+                response = _geneticService.GetShortestPath(route);
+            }
+            else if (selectAlgo.Contains("Travelling"))
+            {
+                TravellingController travelling = new TravellingController(_travellingService);
+                GetRouteDto route = new GetRouteDto
+                {
+                    source=selectedcitysource,
+                    destination = selectedcitydest
+
                 };
                 response = _geneticService.GetShortestPath(route);
             }

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Saket.Kumar\\source\\repos\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj": {}
+    "C:\\Users\\Mohit.Kumar2\\Desktop\\project\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Saket.Kumar\\source\\repos\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj": {
+    "C:\\Users\\Mohit.Kumar2\\Desktop\\project\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Saket.Kumar\\source\\repos\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
+        "projectUniqueName": "C:\\Users\\Mohit.Kumar2\\Desktop\\project\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
         "projectName": "Algo.App",
-        "projectPath": "C:\\Users\\Saket.Kumar\\source\\repos\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
-        "packagesPath": "C:\\Users\\Saket.Kumar\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Saket.Kumar\\source\\repos\\1.0\\Code\\Algo.App\\Algo.App\\obj\\",
+        "projectPath": "C:\\Users\\Mohit.Kumar2\\Desktop\\project\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\Algo.App.csproj",
+        "packagesPath": "C:\\Users\\Mohit.Kumar2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Mohit.Kumar2\\Desktop\\project\\Algo_OT_BLR\\1.0\\Code\\Algo.App\\Algo.App\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Saket.Kumar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Mohit.Kumar2\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
