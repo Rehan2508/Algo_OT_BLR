@@ -47,7 +47,11 @@ namespace Algo.App.Controllers
 
         public IActionResult Index()
         {
-            var citiesData = Cities.GetAll();
+            List<CityCode> cityList = _httpContextAccessor.HttpContext.Session.GetComplexData<List<CityCode>>("CityTable");
+
+            
+            /*var citiesData = Cities.GetAll();*/
+            //System.Console.WriteLine(citiesData);
             var algosData = Algorithms.GetAll();
             /*var algoModel = new AlgoModel();*/
             /*var model = new Routes();*/
@@ -64,9 +68,14 @@ namespace Algo.App.Controllers
                 mainModel.algoss.AlgosSelectList.Add(new SelectListItem { Text = algo.algoName, Value = algo.algoName });
             }
 
-            foreach (var city in citiesData)
+            /*foreach (var city in citiesData)
             {
                 mainModel.routes.CitiesSelectList.Add(new SelectListItem { Text = city.source, Value = city.source });
+            }*/
+            
+            foreach (var city in cityList)
+            {
+                mainModel.routes.CitiesSelectList.Add(new SelectListItem { Text= city.cityName, Value = city.cityName });
             }
 
             return View(mainModel);

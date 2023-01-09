@@ -13,7 +13,7 @@
                     <div class="card-header">
                         <div class="dropdown">
 
-                            <label class="form-label">Select the Algorithm : </label>
+                            <label class="form-label">Select the Algorithm :* </label>
                             <select class="form-select" asp-items="Model.algoss.AlgosSelectList" asp-for="algoss.SelectedAlgoDropDown" required>
                                 <option value="NoSelectedValue">-- Please Select Algorithm --</option>
                             </select>
@@ -23,13 +23,13 @@
 
                     <div class="card-body">
                         <div class="mb-4">
-                            <label class="form-label">Source City : </label>
+                            <label class="form-label">Source City :* </label>
                             <select class="form-select" asp-items="Model.routes.CitiesSelectList" asp-for="routes.SelectedCitySource" required>
                                 <option value="NoSelectedValue">-- Please Select Source City --</option>
                             </select>
 
                             <div class="dest">
-                                <label class="form-label ">Destination City : </label>
+                                <label class="form-label ">Destination City :* </label>
                                 <select class="form-select" asp-items="Model.routes.CitiesSelectList" asp-for="routes.SelectedCityDest" required>
                                     <option value="NoSelectedValue">-- Please Select Destination City --</option>
                                 </select>
