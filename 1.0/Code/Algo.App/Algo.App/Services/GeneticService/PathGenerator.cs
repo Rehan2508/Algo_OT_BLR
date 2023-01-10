@@ -10,10 +10,17 @@ namespace Algo.App.Services.GeneticService
         public static string GeneratePath(int[] parents)
         {
             string path = "";
-            for (int i = 0; i < parents.Length; i++)
+            int last = parents.Length-1;
+            for (int i = last ; i >= 0; i--)
             {
-                i = parents[i];
-                path = DataParsing.cityNames[parents[i]] + " -> " + path + " ";
+                if(i == last)
+                {
+                    path = DataParsing.cityNames.ElementAt(parents[i]).Value;
+                }
+                else{
+                    path = DataParsing.cityNames.ElementAt(parents[i]).Value + " -> " + path + " ";
+                }
+                
             }
             return path;
         }
