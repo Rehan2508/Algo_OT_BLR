@@ -15,7 +15,7 @@ namespace Algo.App.Help
                 new AlgoModel(){algoId=1,algoName="Dijkstra's Shortest Path First algorithm"},
                 new AlgoModel(){algoId=2,algoName="Floyd–Warshall algorithm"},
                 new AlgoModel(){algoId=3,algoName="Genetic Algorithms and heuristics"},
-                new AlgoModel(){algoId=4,algoName="Traveling Salesman"},
+                new AlgoModel(){algoId=4,algoName="Travelling Salesman"},
             };
         }
     }

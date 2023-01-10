@@ -9,7 +9,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
 namespace Algo.App.Services.FloydService
 {
     public class FloydService : IFloydService
@@ -30,12 +29,14 @@ namespace Algo.App.Services.FloydService
             int source = DataParsing.cityCodes[route.source];
             int destination = DataParsing.cityCodes[route.destination];
             FloydAlgoResult result = FloydAlgo.Floyd(graph, source - 1, destination - 1);
-            response.distance = result.distances[destination - 1];
+            double[,] floyd_Matrix = result.distances;
+            response.distance = result.distances[source - 1, destination - 1];
+            Console.WriteLine(response.distance);
             response.path = PathGenerator.GeneratePath(result.parents, destination - 1);
-            response.graph = DataParsing.GraphToString(graph);
+            response.graph = DataParsing.GraphToString(floyd_Matrix);
             response.timeComplexity = "O(n^3)";
             response.spaceComplexity = "O(n)";
-            _routesDataService.SaveData("Floyd Warshall Algorithm", route, response);
+            _routesDataService.SaveData("Floyd Warshall Algorithm", route, response);
             return response;
         }
     }

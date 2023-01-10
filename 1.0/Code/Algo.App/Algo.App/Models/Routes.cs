@@ -21,7 +21,7 @@ namespace Algo.App.Models
         [Column("to_city_code")]
         public int destinationCode { get; set; }
         [Column("distance")]
-        public double distance { get; set; }
+        public int distance { get; set; }
 
         [NotMapped]
         public string SelectedCitySource { get; set; }
