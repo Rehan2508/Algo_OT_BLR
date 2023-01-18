@@ -7,14 +7,12 @@ namespace Algo.App.Services.FloydService
 {
     public class PathGenerator
     {
-        public static string GeneratePath(int[] parents, int destination)
+        public static string GeneratePath(int[] parents, int destination, int source)
         {
-            string path = "" + DataParsing.cityNames[destination + 1];
-            int i = destination;
-            while (parents[i] >= 0)
+            string path = DataParsing.cityNames[source + 1];
+            for (int i = 1; i < parents.Length; i++)
             {
-                path = DataParsing.cityNames[parents[i] + 1] + " -> " + path;
-                i = parents[i];
+                path = path + "->" + DataParsing.cityNames[parents[i] + 1];
             }
             return path;
         }
